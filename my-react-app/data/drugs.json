@@ -1,0 +1,35 @@
+{
+  "Metformin": {
+    "usage": "Break tablet in half, take with water.",
+    "sideEffects": "Nausea, diarrhea possible.",
+    "precautions": "Avoid alcohol, consult doctor.",
+    "images": [
+      { "url": "https://via.placeholder.com/100?text=Tablet", "caption": "Take Metformin tablet" },
+      { "url": "https://via.placeholder.com/100?text=Break", "caption": "Break tablet in half" },
+      { "url": "https://via.placeholder.com/100?text=Water", "caption": "Take with water" }
+    ],
+    "method": "tablet"
+  },
+  "Paracetamol syrup": {
+    "usage": "Pour 10mL into a measuring spoon, take after food.",
+    "sideEffects": "Rare, may include rash.",
+    "precautions": "Do not exceed dose, consult doctor.",
+    "images": [
+      { "url": "https://via.placeholder.com/100?text=Bottle", "caption": "Open Paracetamol bottle" },
+      { "url": "https://via.placeholder.com/100?text=Spoon", "caption": "Pour 10mL into spoon" },
+      { "url": "https://via.placeholder.com/100?text=Drink", "caption": "Take after food" }
+    ],
+    "method": "syrup"
+  },
+  "Insulin": {
+    "usage": "Draw 10 units into syringe, inject in thigh.",
+    "sideEffects": "Low blood sugar possible.",
+    "precautions": "Check blood sugar, consult doctor.",
+    "images": [
+      { "url": "https://via.placeholder.com/100?text=Syringe", "caption": "Prepare syringe" },
+      { "url": "https://via.placeholder.com/100?text=Draw", "caption": "Draw 10 units" },
+      { "url": "https://via.placeholder.com/100?text=Inject", "caption": "Inject in thigh" }
+    ],
+    "method": "syringe"
+  }
+}
