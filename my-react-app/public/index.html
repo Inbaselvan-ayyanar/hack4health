@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediMesh India</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.9/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.3.28/dist/framer-motion.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-size: 1.5rem; }
+    .high-contrast {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      color: #fff;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .glow-button {
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      transition: box-shadow 0.3s ease;
+    }
+    .glow-button:hover { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+    .pulse { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .flash { animation: flash 1s infinite; }
+    @keyframes flash { 50% { background: #ff0; } }
+    input, button { min-height: 48px; }
+    @media (prefers-reduced-motion: reduce) {
+      .animate, .motion-div, .pulse { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="high-contrast">
+  <div id="root" class="min-h-screen"></div>
+  <script type="text/babel" src="src/App.jsx"></script>
+</body>
+</html>
