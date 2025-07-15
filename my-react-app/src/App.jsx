@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import PharmacyFinder from './components/PharmacyFinder';
 import AdherenceTracker from './components/AdherenceTracker';
 import drugDatabase from '../data/drugs.json';
+import './App.css';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -47,7 +48,7 @@ function App() {
 
   return (
     <motion.div
-      className="p-6 min-h-screen high-contrast"
+      className="high-contrast"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
