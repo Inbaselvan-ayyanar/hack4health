@@ -1,42 +1,112 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css */
+.high-contrast {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 1.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.glass-card:hover {
+  transform: scale(1.03);
+}
+
+.neon-blue {
+  color: #3b82f6;
+}
+
+.neon-green {
+  color: #34d399;
+}
+
+.glow-button {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  transform: scale(1.1);
+}
+
+.glow-button:active {
+  transform: scale(0.95);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.flash {
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  50% { background: #ff0; }
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background: #34d399;
+  border-radius: 0.25rem;
+  transition: width 0.5s ease;
+}
+
+input, button {
+  min-height: 48px;
+  font-size: 1.125rem;
+}
+
+input:focus {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  scale: 1.02;
+}
+
+button:focus {
+  outline: none;
+  ring: 2px solid #34d399;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse, .flash, .glass-card, .glow-button {
+    animation: none !important;
+    transition: none !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Tailwind custom utilities */
+@layer utilities {
+  .text-neon-blue {
+    color: #3b82f6;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .text-neon-green {
+    color: #34d399;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .border-neon-blue {
+    border-color: #3b82f6;
+  }
+  .border-neon-green {
+    border-color: #34d399;
+  }
+  .focus\:ring-neon-blue:focus {
+    --tw-ring-color: #3b82f6;
+  }
+  .focus\:ring-neon-green:focus {
+    --tw-ring-color: #34d399;
+  }
 }
